@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Aman Portfolio">
+    <meta name="author" content="Aman">
+    <title>Aman's Portfolio</title>
+   
+    <link rel="stylesheet" href="{% static 'assets/css/meyawo.css' %}">
+    <!-- font icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+    
+	
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+ 
+    
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Aman</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#coding">Coding_Profile</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#skills">Skills</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#projects">Projects</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+                <li class="item ml-md-3">
+                    <a href="{% url 'blog_page' %}" class="btn btn-primary">My Blog</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am Aman </span>
+            </h1>
+            <p class="header-subtitle">FULLSTACK WEB DEVELOPER</p>            
+
+          
+            <a href="#projects" class="btn btn-primary">Visit My Projects</a>
+
+        </div>              
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="{% static 'assets/imgs/aa.jpg' %}" class="about-img" alt="">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        Hi! I'm Aman Kayat, a full-stack web developer, seeking an internship opportunity in a reputed organization that will allow me to expand my knowledge and skills while contributing to the company growth.
+I'm currently pursuing Masters of Computer Applications from NIT Jamshedpur and had done graduation from University of Delhi. <br>
+Talking about web development, I have Backend skills in django framework and frontend skills in Css and bootstrap.
+I'm a senior web developer in Society of Computer Applications of Nit Jamshepur.
+I've made 3 projects using django framework <br>
+1. Movie Master - This is an API based project and using the api, it's shows the details of movies, tvshows and famed people based on the user's query. It also shows trending movies and tvshows. <br>
+2. Blogging App - It's an authentication based application where a user can create it's own blog and can do a lot with that. User can do like and comment on other's blogs also. <br>
+3. Library System
+<br>
+Apart from this, I've a deep interest in competitive coding and I'm active on coding platforms named as GFG and Leetcode.
+I love to learn new technologies and flex my creativity to create amazing things.            
+                    </p>
+                     <a class="btn-rounded btn btn-outline-primary mt-4" href="{% static 'resume.pdf'  %}" download> Download CV</a>
+                     <a class="btn-rounded btn btn-outline-primary mt-4" href="{% static 'resume.pdf'  %}" > View CV</a>
+
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" >
+        <div class="container text-center" id="coding">
+            <!-- <p class="section-subtitle">What I Do ?</p> -->
+            <h6 class="section-title mb-6">Coding's Profiles</h6>
+            <!-- row -->
+            <div class="row">
+                
+                    <div class="col-md-6 col-lg-3">
+                        <a href="https://www.hackerrank.com/amankayat789" target="_blank" style="text-decoration:none;">
+                        <div class="service-card">
+                            <div class="body">
+                                <img src="{% static 'assets/imgs/hrlogo.png' %}" alt="hackerrank logo" class="icon">
+                                  <h6 class="title">Hacker-Rank</h6> 
+                                <p class="subtitle">
+                                    Six stars in Problem Solving Skills. <br> <br>
+                                    
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    
+                                  
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+               
+               
+                <div class="col-md-6 col-lg-3">
+                    <a href="https://auth.geeksforgeeks.org/user/amankayat789/practice/" target="_blank" style="text-decoration:none;">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="{% static 'assets/imgs/gfg.png' %}" alt="gfg" class="icon"  >
+                            <h6 class="title">GFG</h6>
+                            <p class="subtitle">
+                                Doing Practice Of Data Structure & Algorithms on this Platform. <br> <strong>Score: </strong> 1k+
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="https://www.codechef.com/users/amankayat" target="_blank" style="text-decoration:none;">
+
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="{% static 'assets/imgs/codechef.svg' %}" alt="codechef" class="icon">
+                            <h6 class="title">CodeChef</h6>
+                            <p class="subtitle">
+                                Three stars in Competitive Programming. <br> 
+                                
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <br>
+                                    <strong>Highest Rating in Contest: 1658</strong>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="https://codeforces.com/profile/amankayat" target="_blank" style="text-decoration:none;">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="{% static 'assets/imgs/cf.png' %}" alt="codeforces" class="icon">
+                            <h6 class="title">CodeForces</h6>
+                            <p class="subtitle">
+                                Doing Practice Of Competitive Programming. <br> <strong>500+ Problems Solved.</strong> 
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+
+<!-- skills section -->
+<section class="section" id="skills">
+    <div class="container text-center">
+        
+        <h6 class="section-title mb-6">Skills/Tags</h6>
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-6">
+                <h4>CPP</h4>
+                <div class="progress mt-2 mb-3" style="height: 12px;">
+                    
+                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                 </div> 
+                 <h4>Python</h4>
+                 <div class="progress mt-2 mb-3" style="height: 12px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
+                 </div> 
+                 <h4>HTML&CSS</h4>
+                 <div class="progress mt-2 mb-3" style="height: 12px;" >
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                 </div> 
+                 <h4>Javascript</h4>
+                 <div class="progress mt-2 mb-3" style="height: 12px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
+                 </div>
+                 <h4>Django Framework</h4>
+                 <div class="progress mt-2 mb-3" style="height: 12px;">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
+                 </div>
+                 <h4>GitHub</h4>
+                 <div class="progress mt-2 mb-3" style="height: 12px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
+                 </div>
+            </div>
+            <div class="col-md-6">
+                <div class="text-center " style="margin-top: 95px;">
+                    <span class="badge badge-primary mr-3">DS & Algo</span>
+                    <span class="badge badge-secondary mr-3">Operating System</span>
+                    <span class="badge badge-success mr-3 ">Computer Network</span> <br> <br>
+                    <span class="badge badge-dark mr-3 ">Dbms</span>
+                    <span class="badge badge-danger  mr-3">C</span>
+                    <span class="badge badge-warning  mr-3">Java</span>
+                    <span class="badge badge-info  mr-3">Bootstrap</span> <br> <br>
+                    <span class="badge badge-success  mr-3">Github</span>
+                    <span class="badge badge-dark  mr-3">Git</span>
+                    
+                    <span class="badge badge-pill badge-primary mr-3">Dev</span> 
+                    <span class="badge badge-pill badge-secondary mr-3">Django Framework</span> <br><br>
+                    <span class="badge badge-pill badge-success mr-3">Python</span>
+                    <span class="badge badge-pill badge-danger mr-3">Programmer</span> 
+                    <span class="badge badge-pill badge-warning mr-3">Developer</span> <br> <br>
+                    <span class="badge badge-pill badge-info mr-3">SQL</span>
+                    <span class="badge badge-pill badge-primary mr-3">Commpetative Programming</span> 
+                    <span class="badge badge-pill badge-dark  mr-3">API</span>
+                </div>
+              
+            </div>
+           
+           
+        </div><!-- end of row -->
+    </div><!-- end of container -->
+</section> <!-- end of portfolio section -->
+
+
+
+    <!-- portfolio section -->
+    <section class="section" id="projects">
+        <div class="container text-center">
+           
+            <h6 class="section-title mb-6">Projects</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="http://amanportfolio.pythonanywhere.com/" class="portfolio-card">
+                        <img src="{% static 'assets/imgs/movie.png' %}" class="portfolio-card-img" alt="movie" height="358px;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>MOVIE MASTER</h5>
+                                <p class="font-weight-normal">Category: Web Api based Application</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="http://amanblog.pythonanywhere.com/blog/" class="portfolio-card">
+                        <img class="portfolio-card-img border border-dark" src="{% static 'assets/imgs/blog.webp' %}" class="img-responsive rounded" alt="blog" height="358px;">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Blogging App</h5>
+                                <p class="font-weight-normal">Category: Authentication based Application</p>
+                            </span>                         
+                        </span>                         
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="{% static 'assets/imgs/lib.jpg' %}" class="img-responsive rounded" alt="library" height="358px;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Aman's Library System</h5>
+                                <p class="font-weight-normal">Category: Web Application</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+
+      
+    </section> <!-- end of portfolio section -->
+
+ <section >
+    <div class="container text-center mb-5">
+        <div class="row">
+            <h3 class="mb-5">Resume Uploader</h3>
+            <div class="col-md-6" style="margin-top: 50px;">
+               
+                <p > <strong> This is Resume Uploader Project Created by me. In this project , you have to fill the details in the 
+                    form after that upload your Resume. When you click on submit button , it will your profile in right corner
+                    (List Of Candidate Section). You can see your profile & resume clicking on the link.
+                </strong>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <video autoplay muted loop id="myVideo" style="width: 100%; height: 100%;">
+                    <source src="{% static 'resumeuploader.mp4' %}" type="video/mp4">
+                  </video>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <h3 class="mb-5">TODO APP</h3>
+            <div class="col-md-6 box" style="margin-top: 50px;" id="fade-in" >
+                
+                <p> <strong>
+                    It is simple mini Project. In this project , you can add your todo work and  it is there untill 
+                    you don't deleted. you can delete your todo work after work completed. and these todo list are listing 
+                    by upcomming date.
+                </strong> </p>
+            </div>
+            <div class="col-md-6">
+                <video autoplay muted loop id="myVideo" style="width: 100%; height: 100%;" >
+                    <source src="{% static 'todo.mp4' %}" type="video/mp4">
+                  </video>
+            </div>
+        </div>
+        </div>
+ </section>
+
+    
+    <!-- section -->
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work with me?</h6>
+                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                   
+                    <a href="#contact" class="btn btn-lg my-font btn-light rounded"> Hire Me</a>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of section -->
+
+    
+    
+    <!-- blog section -->
+    <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+            <p class="section-subtitle">Recent Posts?</p>
+            <h6 class="section-title mb-6">New Blog</h6>
+            <!-- blog-wrapper -->
+            {% load custom_filters %}
+            {% load blog_extra %}
+            {% for data in blog %}
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="/media/{{data.image}}" class="" alt="blogimage" style="width: 100%; height: 100%;">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">{{data.title}}</h6>
+
+                    <p class="blog-card-caption">
+                        <a href="#">By: Admin <i class='fa fa-heart' style='color: red'></i></a>
+                        <!-- <a href="#"><i class="ti-heart text-danger"></i> 234</a>
+                        <a href="#"><i class="ti-comment"></i> 123</a> -->
+                    </p>
+                    <p>
+                        {{data.description|range_filter|convertmarkdown|safe}}
+                    </p>
+
+                   
+
+                    <a href="{% url 'blogdetails' data.id %}" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+          {% endfor %}
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+    <!-- contact section -->
+    <section class="section bg-dark" id="contact">
+        <div class="container text-center">
+            
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+                
+                <div class="social-links text-center  ml-sm-auto">
+                    <a href="https://www.linkedin.com/in/aman-kayat-554195186/" class="link mr-3" ><i class="ti-linkedin"></i></a>
+                    <a href="https://github.com/amankayat" class="link mr-3"><i class="ti-github"></i></a>
+                    <a href="https://www.instagram.com/aman.k789/" class="link mr-3"><i class="ti-instagram"></i></a>
+                    <a href="mailto:amankayat789@gmail.com" class="link mr-3"><i class="ti-email"></i></a>
+                  
+                </div> <br>
+                <h3>If You Like My Portfolio, Just Click it</h3>  <br>
+                <div class="flex d-flex justify-content-center ">
+                    
+                    <div class="heart mb-3" id="heart-button">
+                        <span class="counter">0</span>
+                        <i class="fa fa-heart"></i>
+                    </div>   
+                    
+                </div>
+                <div>
+                    <h3 id="thanks"></h3>
+                </div>
+               
+               
+           
+         
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer text-center">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="/">AMAN</a></p>
+           
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script>
+        var heart_button = document.getElementById('heart-button');
+        
+        let counter = localStorage.getItem("counter") || 0;
+
+        document.querySelector(".counter").innerText = counter;
+        let res ="Thank You!! "
+heart_button.addEventListener("click", function() {
+   
+  counter++;
+  localStorage.setItem("counter",counter)
+  console.log(counter)
+   document.querySelector('.counter').innerHTML=counter-1;
+   document.getElementById('thanks').innerHTML = res + counter;
+   heart_button.style.visibility = "hidden"
+});
+
+// window.addEventListener('scroll', function(){ 
+//     $('#fade-in').toggleClass('show');
+  
+// });
+
+    </script>
+    
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'assets/js/meyawo.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -------------------------------------------------------------------- -->

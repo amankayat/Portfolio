@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Aman Portfolio">
+    <meta name="author" content="Aman">
+    <title>Aman's Portfolio</title>
+   
+    <link rel="stylesheet" href="{% static 'assets/css/meyawo.css' %}">
+    <!-- font icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Meyawo main styles -->
+    
+	
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+ 
+    
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar bg-light" data-spy="affix" >
+        <div class="container">
+            <a class="logo" style="color:#695aa6;" href="/">Aman</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="/">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/#coding">Coding_Profile</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/#skills">Skills</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/#projects">Projects</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="/#contact">Contact</a>
+                </li>
+                <li class="item ml-md-3">
+                    <a href="{% url 'blog_page' %}" class="btn btn-primary">My Blog</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+ 
+
+    
+    
+    <!-- blog section -->
+    <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+           
+            <h6 class="section-title mb-6">Blog Section</h6>
+            <!-- blog-wrapper -->
+            {% load blog_extra %}
+            {% load custom_filters %}
+            {% for data in blog %}
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="/media/{{data.image}}" class="" alt="blogimage" style="width: 100%; height: 100%;">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">{{data.title}}</h6>
+
+                    <p class="blog-card-caption">
+                        <a href="#">By: Admin</a>
+                        <!-- <a href="#"><i class="ti-heart text-danger"></i> 234</a>
+                        <a href="#"><i class="ti-comment"></i> 123</a> -->
+                    </p>
+                    <p>
+                        {{data.description|range_filter|convertmarkdown|safe}}
+                    </p>
+
+                   
+
+                    <a href="{% url 'blogdetails' data.id %}" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+          {% endfor %}
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+    <!-- contact section -->
+    <section class="section bg-dark" id="contact">
+        <div class="container text-center">
+            
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+                
+                <div class="social-links text-center  ml-sm-auto">
+                    <a href="https://www.linkedin.com/in/aman-kayat-554195186/" class="link mr-3" ><i class="ti-linkedin"></i></a>
+                    <a href="https://github.com/amankayat" class="link mr-3"><i class="ti-github"></i></a>
+                    <a href="https://www.instagram.com/aman.k789/" class="link mr-3"><i class="ti-instagram"></i></a>
+                    <a href="mailto:amankayat789@gmail.com" class="link mr-3"><i class="ti-email"></i></a>
+                  
+                </div> <br>
+                <h3>If You Like My Portfolio, Just Click it</h3>  <br>
+                <div class="flex d-flex justify-content-center ">
+                    
+                    <div class="heart mb-3" id="heart-button">
+                        <span class="counter">0</span>
+                        <i class="fa fa-heart"></i>
+                    </div>   
+                    
+                </div>
+                <div>
+                    <h3 id="thanks"></h3>
+                </div>
+               
+               
+           
+         
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer text-center">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="/">AMAN</a></p>
+           
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script>
+        var heart_button = document.getElementById('heart-button');
+        
+        let counter = localStorage.getItem("counter") || 0;
+
+        document.querySelector(".counter").innerText = counter;
+        let res ="Thank You!! "
+heart_button.addEventListener("click", function() {
+   
+  counter++;
+  localStorage.setItem("counter",counter)
+  console.log(counter)
+   document.querySelector('.counter').innerHTML=counter-1;
+   document.getElementById('thanks').innerHTML = res + counter;
+   heart_button.style.visibility = "hidden"
+});
+
+// window.addEventListener('scroll', function(){ 
+//     $('#fade-in').toggleClass('show');
+  
+// });
+
+    </script>
+    
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static 'assets/js/meyawo.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -------------------------------------------------------------------- -->
